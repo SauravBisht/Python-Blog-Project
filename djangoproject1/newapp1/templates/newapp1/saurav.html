@@ -1,0 +1,22 @@
+{% extends "newapp1/main_template.html" %}
+{% block title %} saurav's Page {% endblock %}
+
+{% block content %}
+Hello World!!! <p>Today's date is {{today}}</p>
+We are
+{% if today.day == 1 %}
+the first day of the month.
+{% elif today.day == 30 %}
+the last day of the month.
+{% else %}
+I don't know.
+{% endif %}
+
+<p>
+    {% for day in days_of_week %}
+    {{day}}
+
+
+</p>
+{% endfor %}
+{% endblock %}
